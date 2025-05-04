@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headline Category Predictor</title>
+    <link rel="Stylesheet" type="text/css"  href="style.css">
+</head>
+<body>
+    <h1>Headline Category Predictor</h1>
+    <form method="POST">
+        <label for="headline">Enter a Headline:</label>
+        <input type="text" name="headline" required>
+        <button type="submit">Predict Category</button>
+    </form>
+    
+    {% if headline %}
+    <div class="result">
+        <p><strong>Input Headline:</strong> {{ headline }}</p>
+        <p><strong>Predicted Category:</strong> {{ category }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
